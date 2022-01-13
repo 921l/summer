@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[10004];
+    char c[10004]={'v'};
+    int len,i,x,g=0,p=0,l=0,t=0;
+    scanf("%s",a);
+    len=strlen(a);
+    for(i=0;i<len;i++)
+    {
+        a[i]=toupper(a[i]);
+    }
+    for(i=0;i<len;i++)
+    {
+        if(a[i]=='G')
+        {
+            g++;
+        }
+    }
+    for(i=0;i<len;i++)
+    {
+        if(a[i]=='P')
+        {
+           p++;
+        }
+    }
+    for(i=0;i<len;i++)
+    {
+        if(a[i]=='L')
+        {
+           l++;
+        }
+    }
+    for(i=0;i<len;i++)
+    {
+        if(a[i]=='T')
+        {
+           t++;
+        }
+    }
+    x=g+l+p+t;
+    for(i=0;i<x;i++)
+    {
+        if(g!=0)
+        {
+            printf("G");
+            g--;
+        }
+         if(p!=0)
+        {
+            printf("P");
+            p--;
+        }
+         if(l!=0)
+        {
+            printf("L");
+            l--;
+        }
+         if(t!=0)
+        {
+            printf("T");
+            t--;
+        }
+    }
+    return 0;
+}
